@@ -47,6 +47,7 @@
                                 <state key="normal" title="ログイン" backgroundImage="btn"/>
                                 <connections>
                                     <action selector="handleLogin:" destination="uxc-fE-I1r" eventType="touchUpInside" id="7K5-0Y-ezA"/>
+                                    <action selector="handleLoginButton:" destination="uxc-fE-I1r" eventType="touchUpInside" id="00q-0j-Z0I"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hA-jc-8Jy">
@@ -57,6 +58,7 @@
                                 <state key="normal" title="アカウント作成" backgroundImage="btn"/>
                                 <connections>
                                     <action selector="handleCreate:" destination="uxc-fE-I1r" eventType="touchUpInside" id="7zc-iW-6Js"/>
+                                    <action selector="handleCreateAccountButton:" destination="uxc-fE-I1r" eventType="touchUpInside" id="LcV-vr-QiC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -77,8 +79,11 @@
                     </view>
                     <connections>
                         <outlet property="displayName" destination="Dlw-Mm-Rjk" id="dXH-4l-Ejy"/>
+                        <outlet property="displayNameTextField" destination="Dlw-Mm-Rjk" id="Ow8-gQ-gGE"/>
                         <outlet property="mailAddress" destination="ntZ-v5-y1s" id="eXi-Ym-Qpa"/>
+                        <outlet property="mailAddressTextField" destination="ntZ-v5-y1s" id="90v-ct-v4a"/>
                         <outlet property="password" destination="H6k-dV-1lG" id="sec-ZK-Lpp"/>
+                        <outlet property="passwordTextField" destination="H6k-dV-1lG" id="gvD-tC-f1d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IE4-YE-D4g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
