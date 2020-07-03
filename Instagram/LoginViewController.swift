@@ -32,15 +32,16 @@ class LoginViewController: UIViewController {
                }
 
                // アドレスとパスワードでユーザー作成。ユーザー作成に成功すると、自動的にログインする
-               Auth.auth().createUser(withEmail: address, password: password) { authResult, error in
+              Auth.auth().createUser(withEmail: address, password: password) { authResult, error in
                    if let error = error {
                        // エラーがあったら原因をprintして、returnすることで以降の処理を実行せずに処理を終了する
                        print("DEBUG_PRINT: " + error.localizedDescription)
-                       return
+                        return
                    }
                    print("DEBUG_PRINT: ユーザー作成に成功しました。")
+               
 
-                   // 表示名を設定する
+                  // 表示名を設定する
                    let user = Auth.auth().currentUser
                    if let user = user {
                        let changeRequest = user.createProfileChangeRequest()
