@@ -117,21 +117,21 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Df-zs-ZIr">
-                                <rect key="frame" x="57" y="168" width="300" height="30"/>
+                                <rect key="frame" x="57" y="168" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="xNb-V7-e1r"/>
                                 </constraints>
-                                <state key="normal" title="表示名を変更"/>
+                                <state key="normal" title="表示名を変更" backgroundImage="btn"/>
                                 <connections>
                                     <action selector="handleChangeButton:" destination="1CO-33-dP4" eventType="touchUpInside" id="hPD-h6-HA3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaT-6Q-YV5">
-                                <rect key="frame" x="57" y="208" width="300" height="30"/>
+                                <rect key="frame" x="57" y="218" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Jbx-fb-T0r"/>
                                 </constraints>
-                                <state key="normal" title="ログアウト"/>
+                                <state key="normal" title="ログアウト" backgroundImage="btn"/>
                                 <connections>
                                     <action selector="handleLogoutButton:" destination="1CO-33-dP4" eventType="touchUpInside" id="QPq-bf-Up8"/>
                                 </connections>
