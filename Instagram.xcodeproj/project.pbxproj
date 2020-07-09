@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,8 +18,8 @@
 		CE520A3924AED72300DF7FAD /* ImageSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE520A3824AED72300DF7FAD /* ImageSelectViewController.swift */; };
 		CE520A3B24AED75900DF7FAD /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE520A3A24AED75900DF7FAD /* PostViewController.swift */; };
 		CE520A3D24AED77F00DF7FAD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE520A3C24AED77F00DF7FAD /* SettingViewController.swift */; };
-		CE520A3F24AEE4F600DF7FAD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE520A3E24AEE4F600DF7FAD /* TabBarController.swift */; };
 		CE520A4124AEEB0D00DF7FAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE520A4024AEEB0D00DF7FAD /* GoogleService-Info.plist */; };
+		CEDEACA924B69F2F00C269B8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEACA824B69F2F00C269B8 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +38,8 @@
 		CE520A3824AED72300DF7FAD /* ImageSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectViewController.swift; sourceTree = "<group>"; };
 		CE520A3A24AED75900DF7FAD /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		CE520A3C24AED77F00DF7FAD /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		CE520A3E24AEE4F600DF7FAD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CE520A4024AEEB0D00DF7FAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEDEACA824B69F2F00C269B8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,6 @@
 				AA2BD6BB83E317E15AFD627E /* Pods-Instagram.debug.xcconfig */,
 				4BE657FF6D0FDA2BEBB7F173 /* Pods-Instagram.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -96,8 +95,8 @@
 				CE520A2024AED52D00DF7FAD /* AppDelegate.swift */,
 				CE520A2224AED52D00DF7FAD /* SceneDelegate.swift */,
 				CE520A2624AED52D00DF7FAD /* Main.storyboard */,
-				CE520A3E24AEE4F600DF7FAD /* TabBarController.swift */,
 				CE520A3C24AED77F00DF7FAD /* SettingViewController.swift */,
+				CEDEACA824B69F2F00C269B8 /* TabBarController.swift */,
 				CE520A3A24AED75900DF7FAD /* PostViewController.swift */,
 				CE520A3824AED72300DF7FAD /* ImageSelectViewController.swift */,
 				CE520A3624AED6F300DF7FAD /* HomeViewController.swift */,
@@ -227,7 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE520A3924AED72300DF7FAD /* ImageSelectViewController.swift in Sources */,
-				CE520A3F24AEE4F600DF7FAD /* TabBarController.swift in Sources */,
+				CEDEACA924B69F2F00C269B8 /* TabBarController.swift in Sources */,
 				CE520A3724AED6F300DF7FAD /* HomeViewController.swift in Sources */,
 				CE520A3B24AED75900DF7FAD /* PostViewController.swift in Sources */,
 				CE520A3D24AED77F00DF7FAD /* SettingViewController.swift in Sources */,

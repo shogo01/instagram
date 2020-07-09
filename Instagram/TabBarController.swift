@@ -2,26 +2,14 @@
 //  TabBarController.swift
 //  Instagram
 //
-//  Created by USER on 2020/07/03.
+//  Created by USER on 2020/07/09.
 //  Copyright © 2020 shogo.ujiie. All rights reserved.
 //
+
 import UIKit
-import Firebase // 先頭でFirebaseをimportしておく
 
 class TabBarController: UITabBarController, UITabBarControllerDelegate {
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        // currentUserがnilならログインしていない
-        if Auth.auth().currentUser == nil {
-            // ログインしていないときの処理
-            let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login")
-            self.present(loginViewController!, animated: true, completion: nil)
-        }
-    }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // タブアイコンの色
@@ -31,7 +19,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         // UITabBarControllerDelegateプロトコルのメソッドをこのクラスで処理する。
         self.delegate = self
     }
-    
+
     // タブバーのアイコンがタップされた時に呼ばれるdelegateメソッドを処理する。
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if viewController is ImageSelectViewController {
@@ -42,19 +30,21 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         } else {
             // その他のViewControllerは通常のタブ切り替えを実施
             return true
-            
         }
     }
-    
-}
 
-/*
- // MARK: - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- // Get the new view controller using segue.destination.
- // Pass the selected object to the new view controller.
- }
- */
+        // Do any additional setup after loading the view.
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 
