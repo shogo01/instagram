@@ -18,7 +18,7 @@ class PostViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
     
-    
+    // 投稿ボタンをタップしたときに呼ばれるメソッド
     @IBAction func handlePostButton(_ sender: Any) {
         // 画像をJPEG形式に変換する
         let imageData = image.jpegData(compressionQuality: 0.75)
@@ -55,7 +55,7 @@ class PostViewController: UIViewController {
     }
     
     
-    
+    // キャンセルボタンをタップしたときに呼ばれるメソッド
     @IBAction func handleCancelButton(_ sender: Any) {
         // 加工画面に戻る
         self.dismiss(animated: true, completion: nil)

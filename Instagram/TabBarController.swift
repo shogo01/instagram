@@ -6,10 +6,11 @@
 //  Copyright © 2020 shogo.ujiie. All rights reserved.
 //
 
+import Firebase
 import UIKit
 
 class TabBarController: UITabBarController, UITabBarControllerDelegate {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // タブアイコンの色
@@ -19,7 +20,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         // UITabBarControllerDelegateプロトコルのメソッドをこのクラスで処理する。
         self.delegate = self
     }
-
+    
     // タブバーのアイコンがタップされた時に呼ばれるdelegateメソッドを処理する。
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if viewController is ImageSelectViewController {
@@ -32,9 +33,19 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
             return true
         }
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+                // currentUserがnilならログインしていない
+        if Auth.auth().currentUser == nil {
+            // ログインしていないときの処理
+            let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login")
+            self.present(loginViewController!, animated: true, completion: nil)
+        }
 }
-
+    
+}
 
 /*
  // MARK: - Navigation

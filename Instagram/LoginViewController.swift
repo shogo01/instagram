@@ -71,8 +71,7 @@ class LoginViewController: UIViewController {
                     return
                 }
                 print("DEBUG_PRINT: ユーザー作成に成功しました。")
-                
-                // 表示名を設定する
+                                // 表示名を設定する
                 let user = Auth.auth().currentUser
                 if let user = user {
                     let changeRequest = user.createProfileChangeRequest()
