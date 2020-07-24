@@ -17,6 +17,8 @@ class PostTableViewCell: UITableViewCell {
     
     @IBOutlet weak var likeLabel: UILabel!
     
+    @IBOutlet weak var commentbutton: UIButton!
+    
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var captionLabel: UILabel!
@@ -41,7 +43,11 @@ class PostTableViewCell: UITableViewCell {
         postImageView.sd_setImage(with: imageRef)
 
         // キャプションの表示
-        self.captionLabel.text = "\(postData.name!) : \(postData.caption!)"
+        self.captionLabel.text = ""
+        
+        for i in 0..<postData.comments.count {
+            self.captionLabel.text! += postData.comments[i]
+        }
 
         // 日時の表示
         self.dateLabel.text = ""

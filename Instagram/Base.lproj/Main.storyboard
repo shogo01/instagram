@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JPk-iT-gjt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JPk-iT-gjt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -84,6 +84,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IE4-YE-D4g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="790" y="-554"/>
+        </scene>
+        <!--Comment View Controller-->
+        <scene sceneID="YzQ-3y-kWi">
+            <objects>
+                <viewController storyboardIdentifier="CommentViewController" id="qWT-Hj-Yyw" customClass="CommentViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MCr-5v-NhA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ep3-61-Nwc">
+                                <rect key="frame" x="57" y="261" width="300" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="コメントする" backgroundImage="btn">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="postCommentButton:" destination="qWT-Hj-Yyw" eventType="touchUpInside" id="35j-ul-Tvc"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NIA-h0-MXd">
+                                <rect key="frame" x="41.5" y="194" width="331" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="dyb-1w-kf3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzw-xX-0UD">
+                                <rect key="frame" x="57" y="332" width="300" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="戻る" backgroundImage="btn">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="dissmissButton:" destination="qWT-Hj-Yyw" eventType="touchUpInside" id="hn4-wV-tIG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ep3-61-Nwc" firstAttribute="centerX" secondItem="7aV-a5-g9G" secondAttribute="centerX" id="8aH-h3-wjA"/>
+                            <constraint firstItem="NIA-h0-MXd" firstAttribute="width" secondItem="MCr-5v-NhA" secondAttribute="width" multiplier="0.8" id="DlA-tf-6i9"/>
+                            <constraint firstItem="NIA-h0-MXd" firstAttribute="top" secondItem="7aV-a5-g9G" secondAttribute="top" constant="150" id="Etu-Jw-iSm"/>
+                            <constraint firstItem="ep3-61-Nwc" firstAttribute="top" secondItem="NIA-h0-MXd" secondAttribute="bottom" constant="33" id="ban-dB-R8j"/>
+                            <constraint firstItem="NIA-h0-MXd" firstAttribute="centerX" secondItem="7aV-a5-g9G" secondAttribute="centerX" id="cTa-f8-5ix"/>
+                            <constraint firstItem="yzw-xX-0UD" firstAttribute="top" secondItem="ep3-61-Nwc" secondAttribute="bottom" constant="31" id="keD-Er-MDq"/>
+                            <constraint firstItem="yzw-xX-0UD" firstAttribute="centerX" secondItem="7aV-a5-g9G" secondAttribute="centerX" id="v6G-gy-KQh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7aV-a5-g9G"/>
+                    </view>
+                    <connections>
+                        <outlet property="commentTextField" destination="NIA-h0-MXd" id="8E0-66-uXE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3UK-I7-bOZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-971.01449275362324" y="947.54464285714278"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="fnw-YP-z7J">

@@ -1,5 +1,4 @@
 import UIKit
-
 import Firebase
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -73,6 +72,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // セル内のボタンのアクションをソースコードで設定する
         cell.likeButton.addTarget(self, action:#selector(handleButton(_:forEvent:)), for: .touchUpInside)
         
+        cell.commentbutton.addTarget(self, action:#selector(commentEdit(_:forEvent:)), for: .touchUpInside)
+        
         return cell
     }
     // セル内のボタンがタップされた時に呼ばれるメソッド
@@ -102,6 +103,22 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let postRef = Firestore.firestore().collection(Const.PostPath).document(postData.id)
             postRef.updateData(["likes": updateValue])
         }
+    }
+    
+    @objc func commentEdit(_ sender: UIButton, forEvent event: UIEvent) {
+        let commentViewController = self.storyboard?.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
+        
+        // タップされたセルのインデックスを求める
+        let touch = event.allTouches?.first
+        let point = touch!.location(in: self.tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+        
+        // 配列からタップされたインデックスのデータを取り出す
+        let targetPostData = postArray[indexPath!.row]
+        
+        commentViewController.postData = targetPostData
+        
+        self.present(commentViewController, animated: true, completion: nil)
     }
     
 }

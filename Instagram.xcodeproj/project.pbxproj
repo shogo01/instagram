@@ -23,6 +23,7 @@
 		CE74002F24BBEA5A00BB681F /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74002E24BBEA5A00BB681F /* PostData.swift */; };
 		CE74003224BBEAE700BB681F /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74003024BBEAE700BB681F /* PostTableViewCell.swift */; };
 		CE74003324BBEAE700BB681F /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE74003124BBEAE700BB681F /* PostTableViewCell.xib */; };
+		CE97EA3924C7300D00C55421 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97EA3824C7300D00C55421 /* CommentViewController.swift */; };
 		CEDEACA924B69F2F00C269B8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEACA824B69F2F00C269B8 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		CE74002E24BBEA5A00BB681F /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		CE74003024BBEAE700BB681F /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		CE74003124BBEAE700BB681F /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		CE97EA3824C7300D00C55421 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		CEDEACA824B69F2F00C269B8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 				CE520A2024AED52D00DF7FAD /* AppDelegate.swift */,
 				CE520A2224AED52D00DF7FAD /* SceneDelegate.swift */,
 				CE520A2624AED52D00DF7FAD /* Main.storyboard */,
+				CE97EA3824C7300D00C55421 /* CommentViewController.swift */,
 				CE520A3C24AED77F00DF7FAD /* SettingViewController.swift */,
 				CEDEACA824B69F2F00C269B8 /* TabBarController.swift */,
 				CE520A3A24AED75900DF7FAD /* PostViewController.swift */,
@@ -246,6 +249,7 @@
 				CE520A3D24AED77F00DF7FAD /* SettingViewController.swift in Sources */,
 				CE74002F24BBEA5A00BB681F /* PostData.swift in Sources */,
 				CE520A3524AED6B700DF7FAD /* LoginViewController.swift in Sources */,
+				CE97EA3924C7300D00C55421 /* CommentViewController.swift in Sources */,
 				CE520A2124AED52D00DF7FAD /* AppDelegate.swift in Sources */,
 				CE520A2324AED52D00DF7FAD /* SceneDelegate.swift in Sources */,
 				CE74002D24BBE79500BB681F /* Const.swift in Sources */,
